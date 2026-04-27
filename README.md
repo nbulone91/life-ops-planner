@@ -28,6 +28,11 @@ For GitHub Pages, use Settings -> Pages -> Deploy from a branch -> main -> / (ro
 - Weekly meal planner with filters
 - Recipe detail panel
 - Grocery list add/check flow
-- Writing assistant draft flow
+- Writing assistant with optional OpenAI Responses API generation
 - Browser `localStorage` persistence
+- Export/import planner backups for moving data between devices
 - Responsive desktop and mobile layout
+
+## AI Writer
+
+The static GitHub Pages version does not include a shared server secret. Each device can store its own OpenAI API key locally in that browser. The key is not exported in planner backups.
