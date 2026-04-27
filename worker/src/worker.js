@@ -29,7 +29,7 @@ export default {
           state: body.state,
           updatedAt: new Date().toISOString(),
         };
-        ctx.waitUntil(env.PLANNER_KV.put(stateKey(syncId), JSON.stringify(record)));
+        await env.PLANNER_KV.put(stateKey(syncId), JSON.stringify(record));
         return json(record, request, env);
       }
 
