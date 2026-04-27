@@ -2,6 +2,10 @@
 
 A polished local-first web app for budget tracking, weekly meal planning, recipes, groceries, and writing drafts.
 
+Live site:
+
+https://nbulone91.github.io/life-ops-planner/
+
 ## Run Locally
 
 This version has no build step.
@@ -16,7 +20,7 @@ Open `http://127.0.0.1:4173/`.
 
 The app is static, so it can be deployed to GitHub Pages, Cloudflare Pages, Netlify, Vercel, or any static host.
 
-For GitHub Pages, push this repo to GitHub and enable Pages with the included workflow.
+For GitHub Pages, use Settings -> Pages -> Deploy from a branch -> main -> / (root).
 
 ## Current Features
 
