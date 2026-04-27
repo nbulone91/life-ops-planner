@@ -28,11 +28,22 @@ For GitHub Pages, use Settings -> Pages -> Deploy from a branch -> main -> / (ro
 - Weekly meal planner with filters
 - Recipe detail panel
 - Grocery list add/check flow
-- Writing assistant with optional OpenAI Responses API generation
+- Writing assistant with optional backend OpenAI Responses API generation
 - Browser `localStorage` persistence
+- Optional multi-device sync through the Cloudflare Worker backend in `worker/`
 - Export/import planner backups for moving data between devices
 - Responsive desktop and mobile layout
 
+## Sync Backend
+
+The frontend can sync through a small Cloudflare Worker API:
+
+- `GET /api/state?syncId=...` pulls planner data
+- `PUT /api/state` saves planner data
+- `POST /api/ai` generates writing drafts using a server-side OpenAI key
+
+Users enter the same sync code on each device. The browser hashes that code before sending it to the backend.
+
 ## AI Writer
 
-The static GitHub Pages version does not include a shared server secret. Each device can store its own OpenAI API key locally in that browser. The key is not exported in planner backups.
+The preferred setup is server-side AI through the Cloudflare Worker with an `OPENAI_API_KEY` secret. If no backend is connected, each device can still store its own OpenAI API key locally in that browser. The browser key is not exported in planner backups.
