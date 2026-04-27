@@ -22,7 +22,7 @@
 }
 
 .topbar {
-  grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto;
+  grid-template-columns: minmax(220px, 1fr) auto auto auto auto auto auto;
 }
 
 .topbar-action {
@@ -32,6 +32,10 @@
 .primary-button:disabled {
   cursor: wait;
   opacity: 0.72;
+}
+
+.status-pill.sync-on {
+  color: var(--blue);
 }
 
 @media (max-width: 780px) {
